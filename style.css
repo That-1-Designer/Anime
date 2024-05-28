@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+:root
+{
+    --black: #2f2f2f;
+    --white: #fff;
+    --red: #f83038;
+}
+.main
+{
+    position:relative;
+    min-height: 100vh;
+    background: linear-gradient(#00fa9a,#7b68ee);
+    padding: 30px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main::before
+{
+    content:'Anime';
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 16vw;
+    font-weight: 700;
+    color: rgba(94, 33, 33, 0.09);
+}
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo
+{
+    max-width: 120px;
+    max-height: 120px;
+}
+.navigation
+{
+    display: flex;
+}
+.navigation li
+{
+    list-style: none;
+}
+.navigation li a
+{
+    position: relative;
+    color: var(--white);
+    margin-left: 40px;
+    text-decoration: none;
+    transition: 0.25s;
+}
+.navigation li a:hover
+{
+    color: #7b68ee;
+}
+.content
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    z-index: 1;
+}
+.content h2
+{
+    font-size: 5em;
+    font-weight: 300;
+    color: black;
+    text-align: center;
+}
+.content h2 span
+{
+    font-weight: 700;
+    transition: 00.25s;
+}
+.content h2 span:hover
+{
+    color:#00FF00;
+}
+.btn
+{
+    display: inline-block ;
+    background: black ;
+    color: white ;
+    text-decoration: none ;
+    padding: 16px 36px ;
+    margin-top: 20px ;
+    border-radius: 50px ;
+    font-size: 1.25em ;
+    transition: 00.25s ;
+}
+.btn:hover
+{
+    letter-spacing: 4px ;
+}
+.otaku
+{
+    max-width: 80%;
+}
+.footer
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sci
+{
+    display: flex;
+}
+.sci li
+{
+    list-style: none;
+}
+.sci li a
+{
+    color: var(--white);
+    font-size: 2em;
+    margin-right: 20px;
+    transition: 00.25s;
+}
+.sci li a:hover
+{
+    color: #00fa9a;
+}
+.dots
+{
+    display: flex;
+}
+.dots .dot
+{
+    width: 10px;
+    height: 10px;
+    background: rgb(255,255,255,0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.dots .dot.active
+{
+    background: var(--white);
+}
+.slider .slides
+{
+    position: absolute;
+    top: 45%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+    transition: 00.25s;
+    opacity: 0;
+    pointer-events: none;
+}
+.slider .slides.active
+{
+    opacity: 1;
+    top: 35%;
+}
+.slider .slides h2
+{
+    color: var(--black);
+    font-size: 2.3em;
+}
+.slider .slides h2:last-child
+{
+    text-align: end;
+}
+.slider .slides h2 span
+{
+    color:#0000FF;
+    font-size: 0.5em;
+    font-weight: 400;
+    font-style: italic;
+}
+.button
+{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #7fff00;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.button:hover
+{
+    color: #255784;
+    background: #7fff00	;
+    box-shadow: 0 0 10px #7fff00, 0 0 40px #7fff00, 0 0 80px #7fff00;
+    transition-delay: 1.0s;
+}
+.button span
+{
+    position: absolute;
+    display: block;
+}
+.button span:nth-child(1)
+{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #7fff00);
+}
+.button:hover span:nth-child(1)
+{
+    left: 100%;
+    transition: 1s;
+}
+.button span:nth-child(3)
+{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #7fff00);
+}
+.button:hover span:nth-child(3)
+{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+.button span:nth-child(2)
+{
+    top: -100;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #7fff00);
+}
+.button:hover span:nth-child(2)
+{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+.button span:nth-child(4)
+{
+    bottom: -100;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #7fff00);
+}
+.button:hover span:nth-child(4)
+{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}

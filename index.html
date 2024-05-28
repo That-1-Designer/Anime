@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo original.png">
+    <title>Anime Is Da Best</title>
+</head>
+<body>
+    <section class="main">
+        <header>
+            <a href="#"><img src="logo original.png" class="logo" height="120px" width="120px"></a>
+            <ul class="navigation">
+                <li><a href="#">Top Features</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">Kushan</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <h2>Anime Are <span> Super Cool</span></h2>
+            <a href="#" class="btn">Watch Now!</a>
+            <img src="otaku.png" class="otaku">
+        </div>
+
+        <!-- Slider Content -->
+        <div class="slider">
+            <div class="slides active">
+                <h2><span>Best Story Lines</span><br>Eg.Naruto etc.</h2>
+                <h2><span>Amazing Animation</span><br>Your Name, Fate etc.</h2>
+            </div>
+        </div>
+        <div class="slider">
+            <div class="slides">
+                <h2><span>Unique Characters</span><br>Eg.Ghouls, Demons etc.</h2>
+                <h2><span>No Plot Armour</span><br>Death Note, Code Geass etc.</h2>
+            </div>
+        </div>
+        <div class="slider">
+            <div class="slides">
+                <h2><span>It is Relatable</span><br>Eg.Naruto etc.</h2>
+                <h2><span>Super Easy to Binge!</span><br>One Piece, Bleach etc.</h2>
+            </div>
+        </div>
+
+        <div class="footer">
+            <ul class="sci">
+                <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            </ul>
+            <div class="dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+        
+        <a class="button" href="suggest action.html">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        "ACTION"Anime Suggestions
+    </a>
+    <a class="button" href="suggest mind.html">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        "MIND"Anime Suggestions
+    </a>
+    <a class="button" href="recommendation.html">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Few Of The Best
+    </a>
+    
+    </section>
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        const slides = document.querySelectorAll('.slides')
+        const dots = document.querySelectorAll('.dot')
+
+        function setActive(i){
+            for(slide of slides)
+            slide.classList.remove('active')
+            slides[i].classList.add('active')
+            for(dot of dots)
+            dot.classList.remove('active')
+            dots[i].classList.add('active')
+        }
+
+        for(let j = 0; j<dots.length; j++){
+            dots[j].addEventListener('click', function(){
+                setActive(j)
+            })
+        }
+    </script>
+</body>
+</html>
